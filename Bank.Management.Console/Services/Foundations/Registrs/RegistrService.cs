@@ -36,12 +36,41 @@ namespace Bank.Management.Console.Services.Foundations.Registrs
 
         private User ValidationAndSignUpUser(User user)
         {
-            throw new NotImplementedException();
+            if(String.IsNullOrWhiteSpace(user.Name)
+                || String.IsNullOrWhiteSpace(user.Password))
+            {
+                this.loggingBroker.LogError("User information is incomplete.");
+                return new User();
+            }
+            else
+            {
+                User userInformation = this.registrBroker.AddUser(user);
+                
+                if(user.Password.Length >= 8)
+                {
+                    if (userInformation is null)
+                    {
+                        this.loggingBroker.LogError("This user does not exist in the database.");
+                        return new User();
+                    }
+                    else
+                    {
+                        this.loggingBroker.LogInformation("User added successfully.");
+                        return user;
+                    }
+                }
+                else
+                {
+                    this.loggingBroker.LogError("Password does not contain 8 characters.");
+                    return new User();
+                }
+            }
         }
 
         private User InvalidSignUpUser()
         {
-            throw new NotImplementedException();
+            this.loggingBroker.LogError("User information is null or empty.");
+            return new User();
         }
 
         private bool ValidationAndLogInUser(User user)
