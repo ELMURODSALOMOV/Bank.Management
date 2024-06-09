@@ -46,12 +46,41 @@ namespace Bank.Management.Console.Services.Foundations.Registrs
 
         private bool ValidationAndLogInUser(User user)
         {
-            throw new NotImplementedException();
+            if(String.IsNullOrWhiteSpace(user.Name)
+                || String.IsNullOrWhiteSpace(user.Password))
+            {
+                this.loggingBroker.LogInformation("User data is not required.");
+                return false;
+            }
+            else
+            {
+               bool IsLogIn =  this.registrBroker.CheckoutUser(user);
+
+                if(user.Password.Length >= 8)
+                {
+                    if(IsLogIn is true)
+                    {
+                        this.loggingBroker.LogInformation("Successfully logged in.");
+                        return true;
+                    }
+                    else
+                    {
+                        this.loggingBroker.LogError("User does not exist in the database.");
+                        return false;
+                    }
+                }
+                else
+                {
+                    this.loggingBroker.LogError("Password does not contain 8 characters.");
+                    return false;
+                }
+            }
         }
 
         private bool InvalidLogInUser()
         {
-            throw new NotImplementedException();
+            this.loggingBroker.LogError("User data is null.");
+            return false;
         }
     }
 }
