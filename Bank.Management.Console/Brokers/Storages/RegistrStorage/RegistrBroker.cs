@@ -2,6 +2,7 @@
 // Great Code Team (c) All rights reserved
 //----------------------------------------
 
+using Bank.Management.Console.Brokers.Storages.RegistrStorage;
 using Bank.Management.Console.Models;
 
 namespace Bank.Management.Console.Brokers.Storages
