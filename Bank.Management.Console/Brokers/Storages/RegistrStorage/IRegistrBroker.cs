@@ -4,7 +4,7 @@
 
 using Bank.Management.Console.Models;
 
-namespace Bank.Management.Console.Brokers.Storages
+namespace Bank.Management.Console.Brokers.Storages.RegistrStorage
 {
     internal interface IRegistrBroker
     {

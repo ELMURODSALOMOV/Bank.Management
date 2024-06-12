@@ -4,6 +4,7 @@
 
 using Bank.Management.Console.Brokers.Loggings;
 using Bank.Management.Console.Brokers.Storages;
+using Bank.Management.Console.Brokers.Storages.RegistrStorage;
 using Bank.Management.Console.Models;
 using System.ComponentModel.DataAnnotations;
 
