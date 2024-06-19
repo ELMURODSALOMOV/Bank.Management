@@ -2,7 +2,7 @@
 // Great Code Team (c) All rights reserved
 //----------------------------------------
 
-namespace Bank.Management.Console.Brokers.Storages.Bank
+namespace Bank.Management.Console.Brokers.Storages.BankStorage
 {
     internal class BankStorageBroker : IBankStorageBroker
     {
@@ -68,7 +68,7 @@ namespace Bank.Management.Console.Brokers.Storages.Bank
             return false;
         }
 
-        public decimal WithdarwMoney(decimal accountNumberForBank, decimal balance)
+        public decimal WithdrawMoney(decimal accountNumberForBank, decimal balance)
         {
             if (accountNumberForBank.ToString().Length >= 20)
             {

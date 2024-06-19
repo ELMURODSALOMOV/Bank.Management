@@ -3,7 +3,7 @@
 //----------------------------------------
 
 using Bank.Management.Console.Brokers.Loggings;
-using Bank.Management.Console.Brokers.Storages.Bank;
+using Bank.Management.Console.Brokers.Storages.BankStorage;
 
 namespace Bank.Management.Console.Services.Foundations.Banks
 {
@@ -14,7 +14,7 @@ namespace Bank.Management.Console.Services.Foundations.Banks
 
         public BankService()
         {
-            this.bankBroker = new BankBrokerStorageBroker();
+            this.bankBroker = new BankStorageBroker();
             this.loggingBroker = new LoggingBroker();
         }
 
