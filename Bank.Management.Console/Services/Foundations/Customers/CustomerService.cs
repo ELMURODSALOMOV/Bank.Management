@@ -106,7 +106,7 @@ namespace Bank_management.Services.Foundation.Banks.Customers
         private bool ValidationAndCreateClient(Customer customer)
         {
             if (!(String.IsNullOrWhiteSpace(customer.Name))
-                && (customer.AccountNumber.ToString().Length == 16
+                && (customer.AccountNumber.ToString().Length >= 16
                 && customer.AccountNumber > 0))
             {
                 bool isCreateClient =
