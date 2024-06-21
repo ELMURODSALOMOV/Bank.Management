@@ -74,10 +74,15 @@ namespace Bank.Management.Console.Brokers.Storages.BankStorage.Customers
                 if (Convert.ToDecimal(clientInfo[firstIndex].Split('*')[2]) >= money)
                 {
                     File.WriteAllText(filePath, string.Empty);
-                    clientInfo[firstIndex].Split('*')[2] =
-                        (Convert.ToDecimal(clientInfo[firstIndex].Split('*')[2]) - money).ToString();
-                    clientInfo[secondIndex].Split('*')[2] =
-                             (Convert.ToDecimal(clientInfo[secondIndex].Split('*')[2]) + money).ToString();
+                    decimal firstAccount = Convert.ToDecimal(clientInfo[firstIndex].Split('*')[2]);
+                    firstAccount = Convert.ToDecimal(clientInfo[firstIndex].Split('*')[2]) - money;
+                    clientInfo[firstIndex].Split('*')[2] = String.Empty;
+                    clientInfo[firstIndex].Split('*')[2] = firstAccount.ToString();
+
+                    decimal secondAccount = Convert.ToDecimal(clientInfo[secondIndex].Split('*')[2]);
+                    firstAccount = Convert.ToDecimal(clientInfo[secondIndex].Split('*')[2]) + money;
+                    clientInfo[secondIndex].Split('*')[2] = String.Empty;
+                    clientInfo[secondIndex].Split('*')[2] = secondAccount.ToString();
 
                     for (int itarator = 0; itarator < clientInfo.Length; itarator++)
                     {
