@@ -122,7 +122,7 @@ namespace Bank_management.Services.Foundation.Banks.Customers
                 }
                 else
                 {
-                    this.loggingBroker.LogInformation("This account has been created.");
+                    this.loggingBroker.LogError("This account has been created.");
                     return isCreateClient;
                 }
             }

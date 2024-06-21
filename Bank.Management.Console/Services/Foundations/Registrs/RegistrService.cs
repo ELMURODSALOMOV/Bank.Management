@@ -49,9 +49,9 @@ namespace Bank.Management.Console.Services.Foundations.Registrs
                 
                 if(user.Password.Length >= 8)
                 {
-                    if (userInformation is null)
+                    if (userInformation.Name is null)
                     {
-                        this.loggingBroker.LogError("This user does not exist in the database.");
+                        this.loggingBroker.LogError("This user is available in the database.");
                         return new User();
                     }
                     else

@@ -19,7 +19,7 @@ namespace Bank.Management.Console.Brokers.Storages
         public User AddUser(User user)
         {
             string[] userLines = File.ReadAllLines(filePath);
-            for (int itaration = 0; itaration > userLines.Length; itaration++)
+            for (int itaration = 0; itaration < userLines.Length; itaration++)
             {
                 string userLine = userLines[itaration];
                 string[] userInfo = userLine.Split('*');
