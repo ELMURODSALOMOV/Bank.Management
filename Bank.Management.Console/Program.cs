@@ -120,6 +120,13 @@ do
         {
             bankProcessingService1.GetAllClient();
         }
+        if(commandClient == 5)
+        {
+            Console.Write("Enter the AccountNumber: ");
+            decimal accountNumber = Convert.ToDecimal(Console.ReadLine());
+            decimal balanceForClient = bankProcessingService1.GetBalanceClient(accountNumber);
+            Console.WriteLine(balanceForClient);
+        }
     }
    
     Console.Write("Is Continue ");
@@ -188,4 +195,5 @@ static void SelectClientFunction()
     Console.WriteLine("2. Transfer Money Between Accounts For Client");
     Console.WriteLine("3. Delete For Client");
     Console.WriteLine("4. Get All Client");
+    Console.WriteLine("5. Get Balance For Client");
 }

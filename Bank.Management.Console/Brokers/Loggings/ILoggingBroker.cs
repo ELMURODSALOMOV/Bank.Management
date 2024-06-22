@@ -9,5 +9,6 @@ namespace Bank.Management.Console.Brokers.Loggings
         void LogInformation(string message);
         void LogError(string userMessage);
         void LogError(Exception exception);
+        void LogInfo(string message);
     }
 }

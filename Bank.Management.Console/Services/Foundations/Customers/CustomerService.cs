@@ -40,7 +40,7 @@ namespace Bank_management.Services.Foundation.Banks.Customers
             
             if(clientInfo is not null)
             {
-                this.loggingBroker.LogInformation(clientInfo.ToString());
+                this.loggingBroker.LogInfo(clientInfo.ToString());
             }
             else
             {
@@ -159,6 +159,7 @@ namespace Bank_management.Services.Foundation.Banks.Customers
             this.loggingBroker.LogError("Client has no information.");
             return false;
         }
+
         private decimal ValidationAndGetBalanceInClient(decimal accountNumber)
         {
             decimal resultGetBalance =
