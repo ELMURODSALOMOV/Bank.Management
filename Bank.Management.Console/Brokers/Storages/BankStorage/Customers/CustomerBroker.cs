@@ -40,6 +40,12 @@ namespace Bank.Management.Console.Brokers.Storages.BankStorage.Customers
             return isDelete;    
         }
 
+        public string ReadAllCustormer()
+        {
+            string clientInfo = File.ReadAllText(filePath);
+            return clientInfo;
+        }
+
         public bool CreateAccountNumberForClient(Customer customer)
         {
             string[] clientAllInfo = File.ReadAllLines(filePath);
