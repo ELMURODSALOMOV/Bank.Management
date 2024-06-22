@@ -8,6 +8,8 @@ namespace Bank.Management.Console.Services.BankProcessings
 {
     internal interface IBankProcessingService
     {
+        string GetAllClient();
+        decimal GetBalanceClient(decimal accountNumber);
         User PostUser(User user);
         bool LogInUser(User user);
         bool PostDeposit(decimal accountNumberForBank, decimal balance);

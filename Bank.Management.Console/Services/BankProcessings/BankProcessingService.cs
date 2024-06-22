@@ -28,8 +28,13 @@ namespace Bank.Management.Console.Services.BankProcessings
         public bool DeleteForClient(decimal accountNumber) =>
             this.customerService.DeleteClient(accountNumber);
 
+        public string GetAllClient() => this.customerService.GetAllCustomer();
+
         public decimal GetBalance(decimal accountNumberForBank) =>
             this.bankService.GetBalanceInBank(accountNumberForBank);
+
+        public decimal GetBalanceClient(decimal accountNumber) => 
+            this.customerService.GetBalanceInClient(accountNumber);
 
         public decimal GetMoney(decimal accountNumberForBank, decimal balance) =>
             this.bankService.GetMoney(accountNumberForBank, balance);
