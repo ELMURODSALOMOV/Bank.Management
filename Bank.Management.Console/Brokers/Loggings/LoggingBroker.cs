@@ -21,8 +21,15 @@ namespace Bank.Management.Console.Brokers.Loggings
 
         public void LogError(Exception exception)
         {
-            System.Console.ForegroundColor= ConsoleColor.DarkRed;
+            System.Console.ForegroundColor = ConsoleColor.DarkRed;
             System.Console.WriteLine(exception.Message);
+            System.Console.ResetColor();
+        }
+
+        public void LogInfo(string message)
+        {
+            System.Console.ForegroundColor = ConsoleColor.DarkYellow;
+            System.Console.WriteLine(message);
             System.Console.ResetColor();
         }
     }
