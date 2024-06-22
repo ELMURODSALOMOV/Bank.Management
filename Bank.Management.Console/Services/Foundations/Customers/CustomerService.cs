@@ -27,6 +27,22 @@ namespace Bank_management.Services.Foundation.Banks.Customers
                 : ValidationAndCreateClient(customer);
         }
 
+        public string GetAllCustomer()
+        {
+            var clientInfo = this.customerBroker.ReadAllCustormer();
+            
+            if(clientInfo is not null)
+            {
+                this.loggingBroker.LogInformation(clientInfo.ToString());
+            }
+            else
+            {
+                this.loggingBroker.LogError("The database is full of information.");
+            }
+
+            return clientInfo;
+        }
+
         public bool DeleteClient(decimal accountNumber)
         {
             return accountNumber < 0 && accountNumber is 0
