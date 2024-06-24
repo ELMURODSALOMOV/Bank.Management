@@ -22,4 +22,4 @@ In this section, you can complete the registration process to access the project
 
 #### 2.2 If you enter a password with less than 8 characters when creating an account, an error will occur.
 
-![SignUpError](../Images/SignUp_Error.gif)
+![SignUpError](../Images/SignUp-Error.gif)
