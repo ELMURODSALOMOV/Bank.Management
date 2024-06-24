@@ -10,6 +10,6 @@ write code according to ``The Standard``rules.
 
 # Sections of the project
 
-### 1. BANK
-### 2. CLIENT
-### 3. REGISTR
+### 1. [BANK](https://github.com/ELMURODSALOMOV/Bank.Management/blob/main/Bank.Management.Console/Dacuments/DB/BANK.md)
+### 2. [CLIENT](https://github.com/ELMURODSALOMOV/Bank.Management/blob/main/Bank.Management.Console/Dacuments/DB/CLIENT.md)
+### 3. [REGISTR](https://github.com/ELMURODSALOMOV/Bank.Management/blob/main/Bank.Management.Console/Dacuments/DB/Registr.md)
