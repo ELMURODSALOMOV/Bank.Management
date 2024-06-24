@@ -78,8 +78,7 @@ namespace Bank.Management.Console.Brokers.Storages.BankStorage.Customers
                 string clientInfo = clientAllInfo[itarator];
                 string[] client = clientInfo.Split('*');
 
-                if (client[0].Contains(customer.Name)
-                    && client[1].Contains(customer.AccountNumber.ToString()))
+                if (client[1].Contains(customer.AccountNumber.ToString()))
                 {
                     return false;
                 }
