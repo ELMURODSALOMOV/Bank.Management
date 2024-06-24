@@ -1,7 +1,7 @@
 # Here you can perform the necessary actions for the Bank's Client.
 In this project, you can open an account number for the Client, transfer money between two clients, and manage the balance of the clients.
 
-# MENU
+## MENU
 
 ![Menu Client](../Images/Menu-Client.png)
 

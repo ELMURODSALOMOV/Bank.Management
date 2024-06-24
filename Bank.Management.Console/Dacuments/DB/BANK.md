@@ -1,7 +1,7 @@
 # Here you can build applications for the Bank.
 In this project, you can learn about opening an account for the Bank, transferring money to the account and the amount of money in the Bank's account.
 
-# MENU
+## MENU
 <br>
 
 ![MenuBank](../Images/MenuBank.png)
