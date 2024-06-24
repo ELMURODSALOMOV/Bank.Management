@@ -1,7 +1,7 @@
 # Registry Department
 In this section, you can complete the registration process to access the project.
 
-# MENU
+## MENU
 
 ![RegistrMenu](../Images/RegistrMenu.png)
 
