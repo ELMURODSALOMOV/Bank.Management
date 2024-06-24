@@ -6,7 +6,7 @@ write code according to ``The Standard``rules.
 ## How does the BankManagmend project work?
 #### The BankManagement project allows us to perform banking operations and customer service operations.
 
-![Menu Image](../Images/MENU.png)
+![Menu Image](/Dacuments/Images/MENU.png)
 
 ## Sections of the project
 
